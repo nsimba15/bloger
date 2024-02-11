@@ -1,0 +1,618 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu";
+}
+
+:root {
+  --Lightred: hsl(356, 100%, 66%);
+  --Very-light-red-hoverbackground: hsl(355, 100%, 74%);
+  --Verydark-blueheadings: hsl(208, 49%, 24%);
+  --White-text: hsl(0, 0%, 100%);
+  --Grayis-blue-footertext: hsl(240, 2%, 79%);
+  --Verydark-blackblue-footerbackground: hsl(240, 10%, 16%);
+  --Verydark-grayish-bluebody-copy: hsl(207, 13%, 34%);
+
+  /*### Gradient
+
+  Background gradient - Intro/CTA mobile nav:*/
+
+  --Verylight-red: hsl(13, 100%, 72%);
+  --Lightred: hsl(353, 100%, 62%);
+
+  /*Background gradient - body:*/
+
+  --Verydark-grayblue: hsl(237, 17%, 21%);
+  --Verydark-desaturatedblue: hsl(237, 23%, 32%);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.hamb {
+  display: none;
+}
+
+.sign {
+  background: var(--White-text);
+  color: var(--Lightred);
+}
+.sign:hover {
+  background-color: var(--Very-light-red-hoverbackground);
+  color: var(--White-text);
+}
+.login {
+  background: transparent;
+  color: var(--Grayis-blue-footertext);
+}
+.login:hover {
+  background: var(--White-text);
+  color: var(--Lightred);
+}
+.butt {
+  display: flex;
+  gap: 20px;
+}
+.butttt {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+.anima {
+  animation-name: anim;
+  animation-duration: 1.8s;
+}
+.anima2 {
+  animation-name: anima;
+  animation-duration: 1.8s;
+}
+
+@keyframes anim {
+  0% {
+    background-color: #fb8d8d;
+    position: absolute;
+    left: -100%;
+  }
+  40% {
+    position: absolute;
+    left: 30%;
+  }
+  85% {
+    position: absolute;
+    left: 39%;
+  }
+}
+@keyframes anima {
+  0% {
+    position: absolute;
+    right: -100%;
+  }
+  40% {
+    position: absolute;
+    right: 30%;
+  }
+  85% {
+    position: absolute;
+    right: 39%;
+  }
+}
+
+.btns {
+  display: none;
+}
+
+main {
+  width: 100%;
+  height: 89vh;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  background: url("/images/bg-pattern-intro-desktop.svg") no-repeat center,
+    linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  border-radius: 0px 0px 0px 12%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 6%;
+}
+
+header .header-content {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+
+.header-content .logo img {
+  width: 90px;
+}
+
+header nav .navContent ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+ul li {
+  position: relative;
+  color: var(--Grayis-blue-footertext);
+  cursor: pointer;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  background-color: var(--White-text);
+  bottom: -4px;
+}
+
+ul li:hover:before {
+  height: 1px;
+}
+ul li:hover {
+  color: var(--White-text);
+}
+
+.hidden {
+  position: absolute;
+  list-style: none;
+  top: 36px;
+  background: var(--White-text);
+  padding: 25px 35px 25px 20px;
+  font-size: 14px;
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  left: -10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px var(--Verydark-grayish-bluebody-copy);
+
+  transition: all 0.9s ease-in;
+}
+
+.hidden li {
+  color: var(--Verydark-grayish-bluebody-copy);
+}
+
+.hidden li:hover {
+  color: var(--Verydark-blackblue-footerbackground);
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.rotate {
+  rotate: 180deg;
+}
+
+main .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+h1 {
+  color: var(--White-text);
+  font-size: 3rem;
+}
+
+.content p {
+  color: var(--Grayis-blue-footertext);
+  margin: 20px 0;
+}
+
+.learn {
+  border: 1px solid var(--White-text);
+}
+
+.future {
+  margin-top: 8%;
+  width: 100%;
+  height: 700px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.future .conteudo {
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-self: baseline;
+  padding-left: 6%;
+  overflow: hidden;
+}
+.mobile {
+  display: none;
+}
+
+.absolu {
+  position: absolute;
+  top: -5%;
+  right: -20%;
+  width: 670px;
+}
+
+.abs {
+  margin-top: 40px;
+  margin-bottom: -10%;
+  color: var(--Verydark-blueheadings);
+}
+
+.conteudo .contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.first {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.first h4 {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--Verydark-blueheadings);
+}
+
+.first p {
+  color: var(--Verydark-grayish-bluebody-copy);
+}
+
+.ilustration .ilus {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 400px;
+  padding: 10px 6%;
+  border-radius: 0px 90px 0px 90px;
+  background: url("/images/bg-pattern-circles.svg") no-repeat,
+    var(--Verydark-grayblue);
+
+  background-position: left;
+  background-size: contain;
+}
+
+.phone {
+  margin-top: 40px;
+}
+
+.ilustration-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--White-text);
+}
+
+.ilustration-content p {
+  line-height: 1.5;
+  color: var(--Grayis-blue-footertext);
+}
+
+.free {
+  margin: 8% 0;
+  position: relative;
+}
+
+.free .free-conteudo {
+  display: flex;
+  align-items: center;
+}
+
+.free-contenido {
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+
+.free-contenido .free-first {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.free-first h4 {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--Verydark-blueheadings);
+}
+
+.free-first p {
+  line-height: 1.4;
+  color: var(--Verydark-grayish-bluebody-copy);
+}
+
+.free-absolu {
+  margin-left: -18%;
+  width: 690px;
+}
+
+.free-mobile {
+  display: none;
+}
+
+footer {
+  display: flex;
+  gap: 20%;
+  padding: 5% 6%;
+  border-radius: 0 90px 0 0;
+  background: var(--Verydark-blackblue-footerbackground);
+}
+
+footer ol.lis {
+  display: flex;
+  gap: 66px;
+}
+ol {
+  list-style: none;
+}
+.list {
+  color: var(--White-text);
+}
+
+.them {
+  margin-top: 15px;
+}
+
+.them li {
+  cursor: pointer;
+  color: gray;
+  margin-top: 5px;
+}
+
+.them li:hover {
+  color: var(--Grayis-blue-footertext);
+}
+
+@media screen and (max-width: 499px) {
+  body {
+    background-color: #fff;
+  }
+  main {
+    width: 100%;
+    height: 85vh;
+    background: url("/images/bg-pattern-intro-mobile.svg") no-repeat bottom,
+      linear-gradient(to top, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    border-radius: 0px 0px 0px 15%;
+  }
+
+  .logo img {
+    width: 70px;
+  }
+  header {
+    padding: 20px 4%;
+  }
+
+  header .header-content {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+  }
+
+  header nav {
+    z-index: 1;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    position: absolute;
+  }
+  nav .navContent ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navContent {
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--White-text);
+    box-shadow: 2px 2px 12px grey;
+    border-radius: 6px;
+  }
+
+  .navContent ul {
+    border-bottom: 1px solid var(--Verydark-grayish-bluebody-copy);
+    padding-bottom: 25px;
+    user-select: none;
+  }
+  .hidden {
+    position: relative;
+    list-style: none;
+    top: 10px;
+    left: 0;
+    background: var(--Grayis-blue-footertext);
+    padding: 15px 0;
+    margin: 0 auto;
+    font-size: 14px;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 5px;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .hidden li {
+    user-select: none;
+    color: var(--Verydark-blackblue-footerbackground);
+  }
+
+  ul li {
+    color: var(--Verydark-blueheadings);
+  }
+
+  ul li:hover {
+    color: var(--Grayis-blue-footertext);
+  }
+  ul li:hover:before {
+    height: 0;
+  }
+
+  nav .btns {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 10px;
+    width: 150px;
+    margin: 20px auto;
+  }
+
+  .btns .sign {
+    color: var(--White-text);
+    background: linear-gradient(
+      to right,
+      hsl(13, 100%, 72%),
+      hsl(353, 100%, 62%)
+    );
+  }
+  .butt {
+    display: none;
+  }
+
+  .hamb {
+    display: block;
+    cursor: pointer;
+  }
+
+  .content {
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .content .butt {
+    display: block;
+  }
+  h1 {
+    color: var(--White-text);
+    font-size: 1.8rem;
+  }
+
+  .future {
+    height: 100%;
+    padding: 20px 4%;
+  }
+
+  .future .conteudo {
+    width: 100%;
+    flex-direction: column;
+    align-self: normal;
+    padding-left: 0;
+    gap: 20px;
+    overflow: visible;
+  }
+
+  .absolu {
+    display: none;
+  }
+  .mobile {
+    width: 120%;
+    display: block;
+    order: -1;
+  }
+
+  .abs {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .conteudo .contenido {
+    text-align: center;
+  }
+
+  .contenido .first p {
+    line-height: 1.6;
+  }
+  .ilustration .ilus {
+    margin-top: 55%;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 16% 4%;
+    background-position: top;
+    text-align: center;
+    gap: 0px;
+  }
+
+  .phone {
+    width: 112%;
+    margin-top: -56%;
+  }
+
+  .free {
+    padding: 10px 4%;
+    margin-bottom: 80px;
+  }
+
+  .free .free-conteudo {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .free-contenido {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+  }
+
+  .free-contenido .free-first {
+    text-align: center;
+  }
+
+  .free-absolu {
+    display: none;
+  }
+
+  .free-mobile {
+    width: 133%;
+    order: -1;
+    display: block;
+  }
+  footer {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 15% 4%;
+    gap: 50px;
+    flex-direction: column;
+  }
+
+  footer ol.lis {
+    gap: 20px;
+  }
+
+  footer ol {
+    flex-direction: column;
+  }
+}
